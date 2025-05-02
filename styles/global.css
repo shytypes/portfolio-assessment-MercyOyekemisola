@@ -1,4 +1,4 @@
-/* Let's remove the default browser spacing */
+/* Base Styles - Let's reset the css */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   line-height: 1.6;
   color: #121212;
   background-color: #ffffff;
@@ -25,8 +25,8 @@ a {
   padding: 0 15px;
 }
 
-.project-section h2, 
-.services h2, 
+.project-section h2,
+.services h2,
 .project-shots h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -43,7 +43,7 @@ a {
   max-width: 800px;
   margin: 0 auto 60px;
   color: #666;
-  font-family: 'Merienda', serif;
+  font-family: "Merienda", serif;
   font-size: 18px;
 }
 
@@ -77,7 +77,7 @@ nav {
 }
 
 .nav-links a:not(.book-call-button):not(.cv-link)::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -122,7 +122,7 @@ nav {
 
 .hero-left p:nth-of-type(2) {
   font-size: 50px;
-  margin-top: -20px;
+  /* margin-top: -20px; */
 }
 
 .hero-left h3 {
@@ -132,14 +132,14 @@ nav {
 .hero-right p {
   font-size: 18px;
   line-height: 35px;
-  font-family: 'Merienda', serif;
+  font-family: "Merienda", serif;
   color: #333333;
 }
 
 .hero-left a {
   color: #333333;
   font-size: 24px;
-  font-family: 'Merienda', serif;
+  font-family: "Merienda", serif;
   margin-top: 20px;
   display: inline-block;
 }
@@ -159,10 +159,10 @@ nav {
 
 @keyframes scroll {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
 
@@ -239,7 +239,7 @@ nav {
   border-radius: 8px;
 }
 
-.service-card img{
+.service-card img {
   height: 28px;
 }
 .service-card h3 {
@@ -325,9 +325,9 @@ nav {
 /* This is the About me Section style */
 #about.about-section {
   padding: 5rem 0;
-  background-color: #0D0D0D;
+  background-color: #0d0d0d;
   position: relative;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .about-section .about-content {
@@ -339,10 +339,10 @@ nav {
   line-height: 1.4;
   margin-bottom: 2rem;
   font-weight: 500;
-  color: #CDCCCC;
+  color: #cdcccc;
 }
 
-.about-section .design-text, 
+.about-section .design-text,
 .about-section .curiosity-text {
   font-weight: 800;
   color: #ffffff;
@@ -352,7 +352,7 @@ nav {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .about-section .about-text p {
@@ -361,11 +361,10 @@ nav {
   font-size: 1rem;
   line-height: 1.7;
   max-width: 100%;
-  font-family: 'Merienda', serif;
-
+  font-family: "Merienda", serif;
 }
 
-.about-section .about-text p:nth-child(-n+5) {
+.about-section .about-text p:nth-child(-n + 5) {
   max-width: calc(100% - 580px);
 }
 
@@ -387,51 +386,142 @@ nav {
 
 /* This is the Contact Section style */
 .contact-section {
-  padding: 5rem 0 3rem;
-  background-color: #0D0D0D;
+  padding: 5rem 0 6rem; 
+  background-color: #0d0d0d;
   position: relative;
-  color: #FFFFFF;
+  color: #ffffff;
   border-top: 1px solid #666666;
 }
 
 .contact-section .contact-content {
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.contact-left {
+  flex: 1;
+  text-align: left;
+  
 }
 
 .contact-section .contact-content h2 {
-  font-size: 3.5rem;
+  font-size: 4.5rem; 
   margin-bottom: 1rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .contact-section .wave-emoji {
-  font-size: 3rem;
+  font-size: 4rem; 
 }
 
 .contact-section .contact-content p {
-  font-size: 1.2rem;
+  font-size: 1.5rem; 
   margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.8);
 }
 
-.contact-section .chat-btn {
-  display: inline-block;
-  background-color: #FFFFFF;
-  color: #000000;
-  padding: 0.75rem 2rem;
-  border-radius: 100px;
-  font-weight: 500;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  text-decoration: none;
+.contact-arrow {
+  width: 200px;
+  height: 100px;
+  opacity: 0.3;
 }
 
-.contact-section .chat-btn:hover {
+.contact-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-form-container {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  position: relative;
+  z-index: 3; 
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #121212;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 2rem;
+  background-color: #b07d1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #c99029;
   transform: translateY(-3px);
+}
+
+/* Form Results Display */
+.form-results {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  display: none;
+  position: relative;
+  z-index: 3; 
+}
+
+.form-results h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.form-results p {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-results .highlight {
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .contact-section .name-watermark {
@@ -452,10 +542,10 @@ nav {
 /* This is the Footer style */
 footer {
   padding: 2rem 0;
-  background-color: #0D0D0D;
+  background-color: #0d0d0d;
   position: relative;
   z-index: 2;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 footer .footer-content {
@@ -481,274 +571,369 @@ footer .social-links a {
 }
 
 footer .social-links a:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-
-/* The Hamburger menu icon is hidden by default */
-.hamburger-icon {
+/* Hamburger Menu */
+.hamburger-btn {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+  padding: 5px;
+  transition: color 0.3s ease;
 }
 
+.hamburger-btn:hover {
+  color: #424242;
+}
+
+/* Mobile Navigation */
+.nav-links.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1rem 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  align-items: flex-start;
+}
+
+.nav-links.show a {
+  padding: 0.75rem 2rem;
+  width: 100%;
+}
 
 /* Finally, let moves to the Media Queries. At this point, I deserve some popcorn and ice cream */
 @media screen and (max-width: 1200px) {
   .hero-left h3 {
-      font-size: 60px;
+    font-size: 60px;
   }
-  
+
   .hero-left p:nth-of-type(2) {
-      font-size: 40px;
+    font-size: 40px;
+  }
+
+  
+  .about-section .about-image {
+    width: 500px;
+    height: 450px;
+  }
+
+  .about-section .about-text p:nth-child(-n + 5) {
+    max-width: calc(100% - 530px);
   }
 }
 
 @media screen and (max-width: 1024px) {
-  /* About Section */
+  
   .about-section .about-text h2 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
-  
+
   .about-section .about-image {
-      width: 450px;
-      height: 400px;
+    width: 420px;
+    height: 380px;
   }
-  
-  .about-section .about-text p:nth-child(-n+5) {
-      max-width: calc(100% - 480px);
+
+  .about-section .about-text p:nth-child(-n + 5) {
+    max-width: calc(100% - 450px);
   }
-  
+
   .contact-section .name-watermark {
-      font-size: 6rem;
+    font-size: 6rem;
   }
-  
+
   /* Bento Grid */
   .bento-grid {
-      grid-template-columns: 45% 1fr;
-      gap: 20px;
+    grid-template-columns: 45% 1fr;
+    gap: 20px;
   }
-  
+
   .grid-item:nth-child(1) {
-      height: 500px;
+    height: 500px;
   }
-  
+
   .grid-item:nth-child(2) {
-      height: 350px;
+    height: 350px;
   }
-  
+
   .grid-item:nth-child(3) {
-      height: 350px;
-      margin-top: 80px;
+    height: 350px;
+    margin-top: 80px;
   }
-  
+
   .grid-item:nth-child(4) {
-      height: 500px;
-      margin-top: -80px;
+    height: 500px;
+    margin-top: -80px;
   }
-  
+
   /* Hero Section */
   .hero-left h3 {
-      font-size: 50px;
+    font-size: 50px;
   }
-  
+
   .hero-left p:nth-of-type(2) {
-      font-size: 36px;
+    font-size: 36px;
   }
 }
 
 @media screen and (max-width: 900px) {
+  
   .about-section .about-image {
-      width: 400px;
-      height: 350px;
+    width: 380px;
+    height: 340px;
   }
-  
-  .about-section .about-text p:nth-child(-n+5) {
-      max-width: calc(100% - 430px);
+
+  .about-section .about-text p:nth-child(-n + 5) {
+    max-width: calc(100% - 410px);
   }
-  
+
   .services-grid {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+  .contact-section .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-left {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .contact-form-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-arrow {
+    display: none;
   }
 }
-
 
 @media screen and (max-width: 799px) {
   /* I am hiding the regular nav links and show hamburger for all screens below 800px */
   .nav-links {
-      display: none;
+    display: none;
   }
-  
-  /* Then, I show hamburger menu icon */
-  .hamburger-icon {
-      display: block;
-  }
-  
-  /* I am using the :after pseudo-element for the hamburger */
-  nav:after {
-      content: '☰';
-      font-size: 1.5rem;
-      cursor: pointer;
-      display: block;
+
+  /* Show hamburger button */
+  .hamburger-btn {
+    display: block;
   }
 }
 
 @media screen and (max-width: 768px) {
   /* Hero Section */
   .hero .container {
-      grid-template-columns: 1fr;
-      gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
-  
+
   .hero-left {
-      text-align: center;
+    text-align: center;
   }
-  
+
   /* Project Grid */
   .project-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
-  
+
   /* About Section */
   .about-section .about-content {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
-  
+
   .about-section .about-text h2 {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
-  
+
   .about-section .about-image {
-      position: relative;
-      width: 100%;
-      height: auto;
-      max-width: 500px;
-      margin: 0 auto 2rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    margin: 2rem auto 0; 
+    order: 2;
   }
-  
-  .about-section .about-text p:nth-child(-n+5) {
-      max-width: 100%;
+
+  .about-section .about-text {
+    order: 1; 
   }
-  
+
+  .about-section .about-text p:nth-child(-n + 5) {
+    max-width: 100%;
+  }
+
   .contact-section .contact-content h2 {
-      font-size: 3rem;
+    font-size: 3.5rem;
   }
-  
+
+  .contact-section .wave-emoji {
+    font-size: 3.5rem;
+  }
+
   .contact-section .name-watermark {
-      font-size: 4rem;
-      bottom: -10px;
+    font-size: 4rem;
+    bottom: -10px;
   }
-  
+
   /* Bento Grid */
   .bento-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
-  
+
   .grid-item:nth-child(1),
   .grid-item:nth-child(2),
   .grid-item:nth-child(3),
   .grid-item:nth-child(4) {
-      height: 400px;
-      margin-top: 0;
+    height: 400px;
+    margin-top: 0;
   }
 }
 
 @media screen and (max-width: 576px) {
   /* Section Headers */
-  .project-section h2, 
-  .services h2, 
+  .project-section h2,
+  .services h2,
   .project-shots h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
-  
+
   /* Hero Section */
   .hero {
-      padding: 100px 0 40px;
+    padding: 100px 0 40px;
   }
-  
+
   .hero-left h3 {
-      font-size: 40px;
+    font-size: 40px;
   }
-  
+
   .hero-left p:nth-of-type(2) {
-      font-size: 30px;
+    font-size: 30px;
   }
-  
+
   .hero-left a {
-      font-size: 20px;
+    font-size: 20px;
   }
-  
+
   /* Marquee */
   .marquee-item img {
-      height: 300px;
+    height: 300px;
   }
-  
+
   /* About Section */
   .about-section .about-text h2 {
-      font-size: 2rem;
+    font-size: 2rem;
   }
-  
+
   /* Contact Section */
   .contact-section .contact-content h2 {
-      font-size: 2.5rem;
+    font-size: 3rem;
   }
-  
+
   .contact-section .wave-emoji {
-      font-size: 2.5rem;
+    font-size: 3rem;
   }
-  
+
   .contact-section .name-watermark {
-      font-size: 3rem;
+    font-size: 3rem;
   }
-  
+
   /* Footer */
   footer .footer-content {
-      flex-direction: column;
-      gap: 1.5rem;
-      text-align: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
   }
-  
+
   footer .social-links {
-      justify-content: center;
+    justify-content: center;
   }
-  
+
   /* Project Shots */
   .project-shots {
-      padding: 40px 0;
+    padding: 40px 0;
   }
-  
+
   .grid-item:nth-child(1),
   .grid-item:nth-child(2),
   .grid-item:nth-child(3),
   .grid-item:nth-child(4) {
-      height: 300px;
+    height: 300px;
   }
-  
+
   .view-more-btn {
-      padding: 10px 24px;
+    padding: 10px 24px;
   }
-  
+
   /* Services */
   .services-grid {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
 @media screen and (max-width: 480px) {
   .hero-left h3 {
-      font-size: 36px;
+    font-size: 36px;
   }
-  
+
   .hero-left p:nth-of-type(2) {
-      font-size: 26px;
+    font-size: 26px;
   }
-  
+
   .section-subtitle {
-      font-size: 16px;
+    font-size: 16px;
   }
 }
 
 
-/* Finally, ijadopin, the battle is over😂. Unto the next */
+@media screen and (max-width: 430px) {
+  footer .social-links {
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    justify-content: center;
+  }
+
+  footer .social-links a {
+    font-size: 0.85rem;
+  }
+
+  footer .copyright p {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer .social-links {
+    gap: 0.75rem;
+  }
+
+  footer .social-links a {
+    font-size: 0.8rem;
+  }
+
+  footer .copyright p {
+    font-size: 0.75rem;
+  }
+
+  /* Contact Section */
+  .contact-section .contact-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .contact-section .wave-emoji {
+    font-size: 2.5rem;
+  }
+
+  .contact-section .contact-content p {
+    font-size: 1.1rem;
+  }
+}
